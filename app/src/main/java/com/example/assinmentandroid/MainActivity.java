@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateHeartsUI(){
         boolean crushNow = gameManager.checkCrushAndUpdateLivesAndNumCrushes();
-        if (gameManager.getNumCrushes() != 0 && crushNow){
+        if (crushNow){
             toastAndVibrate("crush " + gameManager.getNumCrushes() +" !!!");
             main_IMG_hearts[gameManager.getNumCrushes() - 1].setVisibility(View.INVISIBLE);
         }
