@@ -3,28 +3,30 @@ package com.example.assinmentandroid.Logic;
 public class GameManager {
     private final String NONE = "none";
     private final String BARRIER = "barrier";
-    private String[][] matrix = new String[][]{
-            {getNONE(), getNONE(), getNONE()},
-            {getNONE(), getNONE(), getNONE()},
-            {getNONE(), getNONE(), getNONE()},
-            {getNONE(), getNONE(), getNONE()},
-            {getNONE(), getNONE(), getNONE()},
-            {getNONE(), getNONE(), getNONE()},
-            {getNONE(), getNONE(), getNONE()}
-    }; // none, barrier strings
+
+    private String[][] matrix;
+
     private int lives;
     private int numCrushes = 0;
 
     private int carPosition = 1; // 0 = left, 1 = mid, 2 = right
-    private final int matrixRows = 7;
-    private final int matrixCols = 3;
+    private final int matrixRows;
+    private final int matrixCols;
 
-    public GameManager() {
-        this(3);
+    public GameManager(int lives, int matrixRows, int matrixCols) {
+        this.lives = lives;
+        this.matrixRows = matrixRows;
+        this.matrixCols = matrixCols;
+        initMatrix();
     }
 
-    public GameManager(int lives) {
-        this.lives = lives;
+    private void initMatrix(){
+        this.matrix = new String[getMatrixRows()][getMatrixCols()];
+        for (int i = 0; i < getMatrixRows(); i++) {
+            for (int j = 0; j < getMatrixCols(); j++) {
+                this.matrix[i][j] = getNONE();
+            }
+        }
     }
 
     public int getNumCrushes() {
@@ -85,7 +87,7 @@ public class GameManager {
                 setCarPosition(getCarPosition() - 1);
             }
         } else {
-            if (getCarPosition() == matrixCols - 1) {
+            if (getCarPosition() == getMatrixCols() - 1) {
                 return;
             } else {
                 setCarPosition(getCarPosition() + 1);

@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findViews();
-        gameManager = new GameManager(main_IMG_hearts.length);
+        gameManager = new GameManager(main_IMG_hearts.length, main_matrix_IMG_barriers.length, main_matrix_IMG_barriers[0].length);
         initViews();
         startTimer();
     }
