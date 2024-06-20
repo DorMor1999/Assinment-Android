@@ -46,7 +46,24 @@ public class MainActivity extends AppCompatActivity {
         findViews();
         gameManager = new GameManager(main_IMG_hearts.length, main_matrix_IMG_barriers.length, main_matrix_IMG_barriers[0].length);
         initViews();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
         startTimer();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        startTimer();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopTimer();
     }
 
     private void findViews() {
