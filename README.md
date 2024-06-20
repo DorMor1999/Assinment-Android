@@ -12,16 +12,10 @@ This project is a simple endless runner game developed for Android. The main obj
 - **Lives**: The player starts with three lives. Each crash reduces the life count by one.
 - **Endless game**: The game is endless, continuing until the player loses all three lives. After losing all lives, the game offers three new lives for continued play.
 
-### Gameplay Demo
+### Videos
 
-<video width="600" controls>
-  <source src="./demo%201.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+#### Gameplay Demo 1
+[Download and View Gameplay Demo 1](./videos/demo%201.mp4)
 
-<br />
-
-<video width="600" controls>
-  <source src="./demo%202.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+#### Gameplay Demo 2
+[Download and View Gameplay Demo 2](./videos/demo%202.mp4)
