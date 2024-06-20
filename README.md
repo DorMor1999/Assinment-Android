@@ -15,7 +15,7 @@ This project is a simple endless runner game developed for Android. The main obj
 ### Videos
 
 #### Gameplay Demo 1
-[Download and View Gameplay Demo 1](./videos/demo%201.mp4)
+[demo 1.mp4](demo%201.mp4)
 
 #### Gameplay Demo 2
-[Download and View Gameplay Demo 2](./videos/demo%202.mp4)
+[demo 2.mp4](demo%202.mp4)
