@@ -49,12 +49,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        startTimer();
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
         startTimer();
